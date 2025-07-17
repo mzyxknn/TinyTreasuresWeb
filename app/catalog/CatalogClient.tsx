@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Instagram, Facebook, Mail, Phone, MapPin, ChevronDown, ChevronUp, ArrowLeft, Search, ChevronLeft, ChevronRight, Download, Eye, X, ZoomIn, ZoomOut, RotateCcw } from "lucide-react"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
+import { SmoothScrollLink } from "@/components/smooth-scroll-link";
 
 const TikTokIcon = () => (
   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -52,6 +53,25 @@ export default function CatalogClient() {
     const params = new URLSearchParams(Array.from(searchParams.entries()));
     params.set('product', product);
     router.replace(`?${params.toString()}`);
+  };
+
+  const fromSection = searchParams.get('from') || 'products';
+
+  const handleBackToHome = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (window.location.pathname !== "/") {
+      router.push(`/#${fromSection}`);
+    } else {
+      // If already on main page, use smooth scroll
+      const target = document.getElementById(fromSection);
+      if (target) {
+        const headerOffset = 120;
+        const rect = target.getBoundingClientRect();
+        const elementPosition = rect.top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
+    }
   };
 
   // Sample product designs data
@@ -203,10 +223,10 @@ const filteredAndSortedDesigns = useMemo(() => {
       <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div className="px-8 md:px-12 lg:px-16 xl:px-20 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/#products" className="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
+            <a href={`/#${fromSection}`} onClick={handleBackToHome} className="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
               <ArrowLeft className="w-5 h-5" />
               <span className="font-medium">Back to Home</span>
-            </Link>
+            </a>
             <div className="flex items-center space-x-2">
               <Image
                 src="/logo.png"

@@ -175,6 +175,14 @@ export default function Home() {
     return () => clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    if (window.location.hash === "#products") {
+      setTimeout(() => {
+        history.replaceState(null, "", "/");
+      }, 600); // Wait for scroll to finish
+    }
+  }, []);
+
   return (
     <>
       {/* Fixed Full-Screen Animated Blob Background */}
