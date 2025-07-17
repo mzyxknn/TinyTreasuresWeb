@@ -21,7 +21,7 @@ export default function RootLayout({
         />
       </head>
       <body style={{ fontFamily: 'Satoshi, sans-serif' }}>
-        {children}
+          {children}
       </body>
     </html>
   )

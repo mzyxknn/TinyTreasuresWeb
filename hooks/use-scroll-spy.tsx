@@ -17,7 +17,7 @@ export function useScrollSpy(sectionIds: string[], offset = 120) {
         if (section) {
           const rect = section.getBoundingClientRect()
           const sectionTop = rect.top + window.scrollY
-          
+
           // If we've scrolled past this section's top, it's the current one
           if (scrollPosition >= sectionTop) {
             currentSection = sectionId

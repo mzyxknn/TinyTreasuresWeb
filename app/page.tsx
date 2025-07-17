@@ -32,30 +32,76 @@ export default function Home() {
 
   const faqItems = [
     {
-      question: "What are your shipping times?",
+      question: "How to order?",
       answer:
-        "We process orders within 1-2 business days. Standard shipping takes 3-5 business days within the US. International shipping may take 7-14 business days.",
+        "Message us on our Facebook page or contact us via email. We'll provide a message within 24 hours.",
     },
     {
-      question: "What is your return policy?",
+      question: "What are your shipping times?",
       answer:
-        "We accept returns within 14 days of delivery for unused items in original packaging. Custom orders are non-refundable.",
+        "We process orders within 1-2 business days within Camarines Norte. Standard shipping takes 3-7 business days within the Philippines. International shipping may take 7-14 business days.",
     },
     {
       question: "Do you offer bulk orders?",
-      answer: "Yes! We offer special pricing for bulk orders. Please contact us for a custom quote.",
+      answer: "Yes! We offer special pricing for bulk orders. Please contact us for more details.",
     },
     {
       question: "What is the turnaround time for custom requests?",
-      answer: "Custom orders typically take 5-7 business days to complete after design approval.",
+      answer: `<div class="space-y-6">
+        <p class="text-gray-600 mb-6"><strong>Custom orders typically follow this process:</strong></p>
+        
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-blue-600 font-bold text-lg">1.</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 text-lg">Design Phase</h4>
+            <p class="text-gray-600 mt-1">After placing your order, we'll send you a design preview for approval (usually within 1–2 business days).</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-blue-600 font-bold text-lg">2.</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 text-lg">Approval Time</h4>
+            <p class="text-gray-600 mt-1">Once you approve the design, we'll begin crafting your item.</p>
+          </div>
+        </div>
+         
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-blue-600 font-bold text-lg">3.</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 text-lg">Production Time</h4>
+            <p class="text-gray-600 mt-1">It takes 1–3 business days (excluding weekends and holidays) to handcraft and prepare your custom product after design approval.
+             <br />However, turnaround time may vary depending on the number of items in your order and the volume of other custom orders in our queue. We'll always do our best to keep you updated and deliver as quickly as possible.
+
+</p>
+          </div>
+        </div>
+         
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-blue-600 font-bold text-lg">4.</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 text-lg">Shipping</h4>
+            <p class="text-gray-600 mt-1"> For customers <b>within Camarines Norte</b>, orders are available for <b>pickup only</b> once ready.
+            <br />For orders <b>outside Camarines Norte</b>, we ship nationwide. Shipping time will depend on your location and the shipping method selected at checkout. A tracking number will be provided once your order is shipped.</p>
+          </div>
+        
+      </div>`,
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards, PayPal, and bank transfers for larger orders.",
+      answer: "We accept COD, GCash, and bank transfers.",
     },
     {
       question: "What are your business hours?",
-      answer: "Our online store is always open! Customer service is available Monday-Friday, 9am-5pm PST.",
+      answer: "Our online store is always open! Customer service is available Monday-Friday, 9am-5pm (PHT).",
     },
   ]
 
@@ -127,7 +173,7 @@ export default function Home() {
             </nav>
             <div className="hidden md:flex items-center">
               <Button className="bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
-                Shop Now
+                Order Now
               </Button>
             </div>
           </div>
@@ -142,17 +188,17 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4 order-1">
                 <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-800 text-center lg:text-left">
-                  Capture Your <span className="text-blue-500">Memories</span> in Style
+                  Crafted With <span className="text-blue-500">Heart,</span> Made for Yours
                 </h1>
                 <p className="max-w-[600px] text-gray-600 text-base md:text-lg lg:text-xl font-medium text-center lg:text-left mx-auto lg:mx-0">
                   Handcrafted photo products, keychains, pins, and more. Turn your special moments into treasured
                   keepsakes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Button className="bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold shadow-lg text-lg px-8 lg:px-12 py-4 h-auto lg:min-w-[200px]">Shop Now</Button>
+                  <Button className="bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold shadow-lg text-lg px-8 lg:px-12 py-4 h-15 lg:min-w-[200px]">Shop Now</Button>
                   <Button
                     variant="outline"
-                    className="border-3 border-blue-300 text-blue-600 hover:bg-blue-50 bg-white/80 backdrop-blur-sm text-lg px-8 py-4 h-auto"
+                    className="border-3 border-blue-300 text-blue-600 hover:bg-blue-50 bg-white/80 backdrop-blur-sm text-lg px-8 py-4 h-15"
                   >
                     Custom Orders
                   </Button>
@@ -185,7 +231,7 @@ export default function Home() {
           <section id="featured" className="py-16 relative z-20">
             <div className="container px-4 mx-auto md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-800">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
                   Featured Designs
                 </h2>
                 <p className="max-w-[700px] text-gray-600 md:text-xl">Discover our most popular and trending designs</p>
@@ -198,7 +244,7 @@ export default function Home() {
           <section id="products" className="py-16 relative z-20">
           <div className="container px-4 mx-auto md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-800">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
                 Our Products
               </h2>
               <p className="max-w-[700px] text-gray-600 md:text-xl">Browse our collection of handcrafted items</p>
@@ -218,9 +264,9 @@ export default function Home() {
                     Cute and expressive button pins featuring adorable winkie designs. Perfect for adding personality to your bags, jackets, or accessories.
                   </p>
                   <div className="mt-6 flex items-center justify-between">
-                    <span className="text-2xl font-bold text-blue-600">$8.99</span>
+                    <span className="text-2xl font-bold text-blue-600">₱20.00 each</span>
                     <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
-                      Shop Now
+                      Order Now
                     </Button>
                   </div>
                 </div>
@@ -238,9 +284,9 @@ export default function Home() {
                     Classic photo strip design keychain with your favorite memories. Capture those special moments in a nostalgic photostrip format.
                   </p>
                   <div className="mt-6 flex items-center justify-between">
-                    <span className="text-2xl font-bold text-blue-600">$12.99</span>
+                    <span className="text-2xl font-bold text-blue-600">₱30.00 each</span>
                     <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
-                      Shop Now
+                      Order Now
                     </Button>
                   </div>
                 </div>
@@ -262,7 +308,7 @@ export default function Home() {
                   <div className="mt-6 flex items-center justify-between">
                     <span className="text-2xl font-bold text-gray-400">TBA</span>
                     <Button disabled className="bg-gray-300 text-gray-500 px-6 py-2 rounded-lg cursor-not-allowed">
-                      Notify Me
+                      TBA
                     </Button>
                   </div>
                 </div>
@@ -270,7 +316,7 @@ export default function Home() {
             </div>
 
             <div className="mt-16 bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-800">Custom Orders</h3>
+              <h3 className="text-2xl font-black text-gray-800">Custom Orders</h3>
               <p className="mt-2 text-gray-600">
                 Looking for something personalized? We can create custom items just for you!
               </p>
@@ -285,13 +331,13 @@ export default function Home() {
                   <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-500">
                     2
                   </div>
-                  <p>We&apos;ll provide a quote within 24 hours</p>
+                  <p>We&apos;ll provide a message within 24 hours</p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-500">
                     3
                   </div>
-                  <p>Turnaround time: 3-5 business days after approval</p>
+                  <p>Turnaround time: 1-2 business days after approval</p>
                 </div>
               </div>
               <Button className="mt-6 bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white">Request Custom Order</Button>
@@ -306,7 +352,7 @@ export default function Home() {
           <div className="container px-4 mx-auto md:px-6">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-800 text-center lg:text-left">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800 text-center lg:text-left">
                   About Tiny Treasures
                 </h2>
                 <p className="text-gray-600 text-center lg:text-left mx-auto lg:mx-0">
@@ -342,7 +388,7 @@ export default function Home() {
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Founder Photo"
+                  src="/about section.png"
                   alt="About Tiny Treasures"
                   fill
                   className="object-cover"
@@ -356,7 +402,7 @@ export default function Home() {
           <section id="faq" className="py-16 relative z-20">
           <div className="container px-4 mx-auto md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-800">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
                 Frequently Asked Questions
               </h2>
               <p className="max-w-[700px] text-gray-600 md:text-xl">
@@ -373,7 +419,7 @@ export default function Home() {
           <section id="contact" className="py-16 relative z-20">
           <div className="container px-4 mx-auto md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-800">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
                 Get In Touch
               </h2>
               <p className="max-w-[700px] text-gray-600 md:text-xl">
@@ -382,7 +428,7 @@ export default function Home() {
             </div>
             <div className="max-w-2xl mx-auto mt-12">
               <Card className="p-8 bg-white/90 backdrop-blur-sm shadow-xl">
-                <h3 className="text-xl font-bold text-gray-800 mb-6">Contact Form</h3>
+                <h3 className="text-xl font-bold text-center text-gray-800 mb-6">Contact Us</h3>
                 <form className="space-y-6">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
@@ -439,11 +485,13 @@ export default function Home() {
     {/* Footer */}
     <footer className="bg-gradient-to-r from-sky-400 to-blue-500 text-white py-12 relative z-20">
       <div className="container px-4 mx-auto md:px-6">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Left side - Company Info */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold text-white">Tiny Treasures</h3>
+            <h3 className="text-2xl font-black text-white">Tiny Treasures</h3>
             <p className="mt-4 text-white/80">
-              Handcrafted photo products and accessories to preserve your special moments.
+              Thoughtfully crafted keepsakes to capture and <br />
+              cherish your most meaningful memories.
             </p>
             <div className="flex items-center justify-center md:justify-start mt-4 space-x-3">
               <span className="text-white font-medium">Follow us:</span>
@@ -461,48 +509,69 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="text-center md:text-left">
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <SmoothScrollLink href="#home" className="text-white/80 hover:text-white transition-colors">
-                  Home
-                </SmoothScrollLink>
-              </li>
-              <li>
-                <SmoothScrollLink href="#products" className="text-white/80 hover:text-white transition-colors">
-                  Products
-                </SmoothScrollLink>
-              </li>
-              
-              <li>
-                <SmoothScrollLink href="#about" className="text-white/80 hover:text-white transition-colors">
-                  About
-                </SmoothScrollLink>
-              </li>
-              <li>
-                <SmoothScrollLink href="#contact" className="text-white/80 hover:text-white transition-colors">
-                  Contact
-                </SmoothScrollLink>
-              </li>
-            </ul>
-          </div>
-          <div className="text-center md:text-left">
-            <h3 className="text-lg font-semibold text-white">Contact</h3>
-            <ul className="mt-4 space-y-2">
-              <li className="flex items-center justify-center md:justify-start space-x-2">
-                <Mail className="w-5 h-5 text-white" />
-                <span className="text-white/80">tinytreasuresab@gmail.com</span>
-              </li>
-              <li className="flex items-center justify-center md:justify-start space-x-2">
-                <Phone className="w-5 h-5 text-white" />
-                <span className="text-white/80">(555) 123-4567</span>
-              </li>
-              <li className="flex items-center justify-center md:justify-start space-x-2">
-                <MapPin className="w-5 h-5 text-white" />
-                <span className="text-white/80">123 Creative Lane, Artsville, CA 90210</span>
-              </li>
-            </ul>
+          
+          {/* Right side - Three columns grouped together */}
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+              <ul className="mt-4 space-y-2">
+                <li>
+                  <SmoothScrollLink href="#home" className="text-white/80 hover:text-white transition-colors">
+                    Home
+                  </SmoothScrollLink>
+                </li>
+                <li>
+                  <SmoothScrollLink href="#products" className="text-white/80 hover:text-white transition-colors">
+                    Products
+                  </SmoothScrollLink>
+                </li>
+                
+                <li>
+                  <SmoothScrollLink href="#about" className="text-white/80 hover:text-white transition-colors">
+                    About
+                  </SmoothScrollLink>
+                </li>
+                <li>
+                  <SmoothScrollLink href="#contact" className="text-white/80 hover:text-white transition-colors">
+                    Contact
+                  </SmoothScrollLink>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold text-white">Product</h3>
+              <ul className="mt-4 space-y-2">
+                <li>
+                  <SmoothScrollLink href="#products" className="text-white/80 hover:text-white transition-colors">
+                    Wikie Button Pins
+                  </SmoothScrollLink>
+                </li>
+                <li>
+                  <SmoothScrollLink href="#products" className="text-white/80 hover:text-white transition-colors">
+                    Photostrip Keychain
+                  </SmoothScrollLink>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="text-center md:text-left">
+              <h3 className="text-lg font-semibold text-white">Contact</h3>
+              <ul className="mt-4 space-y-2">
+                <li className="flex items-center justify-center md:justify-start space-x-2">
+                  <Mail className="w-5 h-5 text-white" />
+                  <span className="text-white/80">tinytreasuresab@gmail.com</span>
+                </li>
+                <li className="flex items-center justify-center md:justify-start space-x-2">
+                  <Phone className="w-5 h-5 text-white" />
+                  <span className="text-white/80">(+63) 939-620-4233</span>
+                </li>
+                <li className="flex items-center justify-center md:justify-start space-x-2">
+                  <MapPin className="w-8 h-8 text-white" />
+                  <span className="text-white/80">Daet, Camarines Norte, Philippines, 4600</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/20 text-center text-white/80">

@@ -37,7 +37,7 @@ export function FloatingMobileNav({ activeSection }: FloatingMobileNavProps) {
                   <span className="text-sm font-medium whitespace-nowrap">{item.label}</span>
                 )}
                 {!isActive && (
-                  <span className="sr-only">{item.label}</span>
+                <span className="sr-only">{item.label}</span>
                 )}
               </SmoothScrollLink>
             )
