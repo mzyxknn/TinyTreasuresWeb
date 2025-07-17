@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -25,7 +26,7 @@ const TikTokIcon = () => (
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
-  const sectionIds = ["home", "products", "about", "contact"]
+  const sectionIds = ["home", "products", "about", "contact", "customOrders"]
   const activeSection = useScrollSpy(sectionIds)
 
 
@@ -33,17 +34,53 @@ export default function Home() {
   const faqItems = [
     {
       question: "How to order?",
-      answer:
-        "Message us on our Facebook page or contact us via email. We'll provide a message within 24 hours.",
-    },
-    {
-      question: "What are your shipping times?",
-      answer:
-        "We process orders within 1-2 business days within Camarines Norte. Standard shipping takes 3-7 business days within the Philippines. International shipping may take 7-14 business days.",
-    },
-    {
-      question: "Do you offer bulk orders?",
-      answer: "Yes! We offer special pricing for bulk orders. Please contact us for more details.",
+      answer: `<div class="space-y-6">
+        <p class="text-gray-600 mb-6"><strong>Follow these simple steps to place your order:</strong></p>
+        
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-blue-600 font-bold text-lg">1.</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 text-lg">Choose Your Design</h4>
+            <p class="text-gray-600 mt-1">Choose your preferred photo strip design or photo for button pins and send it to us through messenger.</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-blue-600 font-bold text-lg">2.</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 text-lg">Send Your Photos</h4>
+            <p class="text-gray-600 mt-1">Send your 3 desired photos for the photo strip keychain or photo for button pins to our email: <strong class="text-sky-500 bg-sky-50 px-2 py-1 rounded">tinytreasuresab@gmail.com</strong> for the better quality of the pictures.</p>
+          </div>
+        </div>
+         
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-blue-600 font-bold text-lg">3.</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 text-lg">Down Payment</h4>
+            <p class="text-gray-600 mt-1">50% down payment via GCash is strictly required to avoid cancellation, and it is nonrefundable.</p>
+          </div>
+        </div>
+         
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-blue-600 font-bold text-lg">4.</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800 text-lg">Lead Time</h4>
+            <p class="text-gray-600 mt-1">Please allow 1–2 days lead time for your order to be ready. (We'll send updates as much as we can.)</p>
+          </div>
+        </div>
+        
+        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+          <p class="text-gray-600"><strong>P.S.</strong> You may also message us if you'd like to add or remove anything from your strip design.</p>
+        </div>
+      </div>`,
     },
     {
       question: "What is the turnaround time for custom requests?",
@@ -56,7 +93,7 @@ export default function Home() {
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Design Phase</h4>
-            <p class="text-gray-600 mt-1">After placing your order, we'll send you a design preview for approval (usually within 1–2 business days).</p>
+            <p class="text-gray-600 mt-1">After placing your order and sending your chosen design inspiration, we'll send you a design preview for approval (usually within a day).</p>
           </div>
         </div>
         
@@ -76,10 +113,16 @@ export default function Home() {
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Production Time</h4>
-            <p class="text-gray-600 mt-1">It takes 1–3 business days (excluding weekends and holidays) to handcraft and prepare your custom product after design approval.
-             <br />However, turnaround time may vary depending on the number of items in your order and the volume of other custom orders in our queue. We'll always do our best to keep you updated and deliver as quickly as possible.
-
-</p>
+            <div class="space-y-3 mt-1">
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <p class="text-gray-600">It takes 1–2 business days (excluding weekends and holidays) to handcraft and prepare your custom product after design approval.</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <p class="text-gray-600">However, turnaround time may vary depending on the number of items in your order and the volume of other custom orders in our queue. We'll always do our best to keep you updated and deliver as quickly as possible.</p>
+              </div>
+            </div>
           </div>
         </div>
          
@@ -89,15 +132,33 @@ export default function Home() {
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Shipping</h4>
-            <p class="text-gray-600 mt-1"> For customers <b>within Camarines Norte</b>, orders are available for <b>pickup only</b> once ready.
-            <br />For orders <b>outside Camarines Norte</b>, we ship nationwide. Shipping time will depend on your location and the shipping method selected at checkout. A tracking number will be provided once your order is shipped.</p>
+            <div class="space-y-3 mt-1">
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <p class="text-gray-600">For customers <b>within Camarines Norte</b>, orders are available for <b>pickup or local delivery</b> once ready. Just let us know your preferred option!</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <p class="text-gray-600">For orders <b>outside Camarines Norte</b>, we ship nationwide. Shipping time will depend on your location and the shipping method selected at checkout. A tracking number will be provided once your order is shipped.</p>
+              </div>
+            </div>
           </div>
         
       </div>`,
     },
     {
+      question: "What are your shipping times?",
+      answer:
+        "We process orders within 1-2 business days within Camarines Norte. Standard shipping takes 3-7 business days within the Philippines. International shipping may take 7-14 business days.",
+    },
+    {
+      question: "Do you offer bulk orders?",
+      answer: "Yes! We offer special pricing for bulk orders. Please contact us for more details.",
+    },
+   
+    {
       question: "What payment methods do you accept?",
-      answer: "We accept COD, GCash, and bank transfers.",
+      answer: "We accept Cash on Pick Up (COP), Cash on Delivery (COD), GCash, and bank transfers.",
     },
     {
       question: "What are your business hours?",
@@ -116,20 +177,20 @@ export default function Home() {
 
   return (
     <>
-    {/* Fixed Full-Screen Animated Blob Background */}
-    <div className="fixed-blob-background">
-      <div className="hero-blob hero-blob-1"></div>
-      <div className="hero-blob hero-blob-2"></div>
-      <div className="hero-blob hero-blob-3"></div>
-      <div className="hero-blob hero-blob-4"></div>
-      <div className="hero-blob hero-blob-5"></div>
-      <div className="hero-blob hero-blob-6"></div>
-      <div className="hero-blob hero-blob-7"></div>
-      <div className="hero-blob hero-blob-8"></div>
-    </div>
+      {/* Fixed Full-Screen Animated Blob Background */}
+      <div className="fixed-blob-background">
+        <div className="hero-blob hero-blob-1"></div>
+        <div className="hero-blob hero-blob-2"></div>
+        <div className="hero-blob hero-blob-3"></div>
+        <div className="hero-blob hero-blob-4"></div>
+        <div className="hero-blob hero-blob-5"></div>
+        <div className="hero-blob hero-blob-6"></div>
+        <div className="hero-blob hero-blob-7"></div>
+        <div className="hero-blob hero-blob-8"></div>
+      </div>
 
-    {/* Navigation */}
-    <header className="sticky top-0 z-50 px-8 md:px-12 lg:px-16 xl:px-20 pt-4">
+      {/* Navigation */}
+    <header className="sticky top-0 z-50 px-4 md:px-12 lg:px-16 xl:px-20 pt-4">
         <div className="backdrop-blur-md bg-white/20 border border-white/30 rounded-2xl shadow-xl">
           <div className="container flex items-center justify-center md:justify-between h-16 px-6 mx-auto">
             <SmoothScrollLink href="#home" className="flex items-center">
@@ -141,47 +202,49 @@ export default function Home() {
                 className="h-18 w-auto"
                 priority
               />
-            </SmoothScrollLink>
+          </SmoothScrollLink>
             <nav className="hidden md:flex items-center space-x-8">
-              <SmoothScrollLink
-                href="#home"
+            <SmoothScrollLink
+              href="#home"
                 className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${activeSection === "home" ? "text-blue-800 font-bold" : ""}`}
-              >
-                Home
-              </SmoothScrollLink>
+            >
+              Home
+            </SmoothScrollLink>
           
-              <SmoothScrollLink
-                href="#products"
+            <SmoothScrollLink
+              href="#products"
                 className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${activeSection === "products" ? "text-blue-800 font-bold" : ""}`}
-              >
-                Products
-              </SmoothScrollLink>
+            >
+              Products
+            </SmoothScrollLink>
 
-              <SmoothScrollLink
-                href="#about"
+            <SmoothScrollLink
+              href="#about"
                 className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${activeSection === "about" ? "text-blue-800 font-bold" : ""}`}
-              >
+            >
                 About Us
-              </SmoothScrollLink>
+            </SmoothScrollLink>
 
-              <SmoothScrollLink
-                href="#contact"
+            <SmoothScrollLink
+              href="#contact"
                 className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${activeSection === "contact" ? "text-blue-800 font-bold" : ""}`}
-              >
-                Contact
-              </SmoothScrollLink>
-            </nav>
+            >
+              Contact
+            </SmoothScrollLink>
+          </nav>
             <div className="hidden md:flex items-center">
-              <Button className="bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
-                Order Now
-              </Button>
+              <Link href="/catalog">
+                <Button className="bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
+                  Order Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="min-h-screen relative px-8 md:px-12 lg:px-16 xl:px-20">
-        <main>
+      <div className="min-h-screen relative px-4 md:px-12 lg:px-16 xl:px-20">
+      <main>
         {/* Hero Section */}
         <section id="home" className="relative py-12 sm:py-16 lg:py-20 min-h-[600px] flex items-center">
           <div className="container relative px-4 mx-auto md:px-6 hero-content">
@@ -195,13 +258,15 @@ export default function Home() {
                   keepsakes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Button className="bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold shadow-lg text-lg px-8 lg:px-12 py-4 h-15 lg:min-w-[200px]">Shop Now</Button>
-                  <Button
-                    variant="outline"
-                    className="border-3 border-blue-300 text-blue-600 hover:bg-blue-50 bg-white/80 backdrop-blur-sm text-lg px-8 py-4 h-15"
-                  >
-                    Custom Orders
-                  </Button>
+                  <Link href="https://www.facebook.com/profile.php?id=100089262530024">
+                    <Button className="w-full bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold shadow-lg text-lg px-4 lg:px-12 py-4 h-15 lg:min-w-[200px]">Order Now</Button>
+                  </Link>
+                  <SmoothScrollLink href="#customOrders" className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${activeSection === "products" ? "text-blue-800 font-bold" : ""}`}>
+                    <Button variant="outline"className="w-full border-3 border-blue-300 text-blue-600 hover:bg-blue-50 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]">
+                      Custom Orders
+                    </Button>
+                  </SmoothScrollLink>
+                  
                 </div>
               </div>
 
@@ -225,22 +290,22 @@ export default function Home() {
 
     {/* Glassmorphism Background Container */}
     <div className="relative z-10 bg-white/30 backdrop-blur-md border-t border-white/20 shadow-lg">
-      <div className="px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="px-4 md:px-12 lg:px-16 xl:px-20">
         <main>
-          {/* Featured Designs Carousel */}
+        {/* Featured Designs Carousel */}
           <section id="featured" className="py-16 relative z-20">
-            <div className="container px-4 mx-auto md:px-6">
-              <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+          <div className="container px-4 mx-auto md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
-                  Featured Designs
-                </h2>
-                <p className="max-w-[700px] text-gray-600 md:text-xl">Discover our most popular and trending designs</p>
-              </div>
-              {isLoading ? <CarouselSkeleton /> : <Carousel />}
+                Featured Designs
+              </h2>
+              <p className="max-w-[700px] text-gray-600 md:text-xl">Discover our most popular and trending designs</p>
             </div>
-          </section>
+            {isLoading ? <CarouselSkeleton /> : <Carousel />}
+          </div>
+        </section>
 
-          {/* Products Section */}
+        {/* Products Section */}
           <section id="products" className="py-16 relative z-20">
           <div className="container px-4 mx-auto md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -255,7 +320,9 @@ export default function Home() {
                 <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative group cursor-pointer">
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-sm font-medium text-blue-600 uppercase tracking-wide">PINS</span>
-                    <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                    <Link href="/catalog?product=button-pins">
+                      <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                    </Link>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
                     Winkie Button Pins
@@ -264,18 +331,22 @@ export default function Home() {
                     Cute and expressive button pins featuring adorable winkie designs. Perfect for adding personality to your bags, jackets, or accessories.
                   </p>
                   <div className="mt-6 flex items-center justify-between">
-                    <span className="text-2xl font-bold text-blue-600">₱20.00 each</span>
-                    <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
-                      Order Now
-                    </Button>
-                  </div>
-                </div>
+                    <span className="font-bold text-blue-600 text-lg md:text-2xl">₱20.00 each</span>
+                    <Link href="https://www.facebook.com/profile.php?id=100089262530024">
+                      <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
+                        Order Now
+                      </Button>
+                    </Link>
+                    </div>
+                    </div>
 
                 {/* Photostrip Keychain */}
                 <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative group cursor-pointer">
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-sm font-medium text-blue-600 uppercase tracking-wide">KEYCHAIN</span>
-                    <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                    <Link href="/catalog?product=keychain">
+                      <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                    </Link>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
                     Photostrip Keychain
@@ -284,12 +355,14 @@ export default function Home() {
                     Classic photo strip design keychain with your favorite memories. Capture those special moments in a nostalgic photostrip format.
                   </p>
                   <div className="mt-6 flex items-center justify-between">
-                    <span className="text-2xl font-bold text-blue-600">₱30.00 each</span>
-                    <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
-                      Order Now
-                    </Button>
-                  </div>
-                </div>
+                    <span className="font-bold text-blue-600 text-lg md:text-2xl">₱39.00 each</span>
+                    <Link href="https://www.facebook.com/profile.php?id=100089262530024">
+                      <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
+                        Order Now
+                      </Button>
+                    </Link>
+                    </div>
+                    </div>
 
                 {/* Coming Soon */}
                 <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg transition-all duration-300 relative opacity-75">
@@ -306,16 +379,16 @@ export default function Home() {
                      We&apos;re working on something special for you! Stay tuned for our next amazing product that will add even more magic to your memories.
                    </p>
                   <div className="mt-6 flex items-center justify-between">
-                    <span className="text-2xl font-bold text-gray-400">TBA</span>
+                    <span className="font-bold text-gray-400 text-lg md:text-2xl">TBA</span>
                     <Button disabled className="bg-gray-300 text-gray-500 px-6 py-2 rounded-lg cursor-not-allowed">
                       TBA
                     </Button>
-                  </div>
-                </div>
-              </div>
+                    </div>
+                    </div>
+                    </div>
             </div>
 
-            <div className="mt-16 bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+            <div id ="customOrders" className="mt-16 bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg">
               <h3 className="text-2xl font-black text-gray-800">Custom Orders</h3>
               <p className="mt-2 text-gray-600">
                 Looking for something personalized? We can create custom items just for you!
@@ -340,14 +413,16 @@ export default function Home() {
                   <p>Turnaround time: 1-2 business days after approval</p>
                 </div>
               </div>
-              <Button className="mt-6 bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white">Request Custom Order</Button>
+              <Link href="https://www.facebook.com/profile.php?id=100089262530024">
+                <Button className="mt-6 bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white">Request Custom Order</Button>
+              </Link>
             </div>
           </div>
         </section>
 
 
 
-          {/* About Section */}
+        {/* About Section */}
           <section id="about" className="py-16 relative z-20">
           <div className="container px-4 mx-auto md:px-6">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -398,7 +473,7 @@ export default function Home() {
           </div>
         </section>
 
-          {/* FAQ Section */}
+        {/* FAQ Section */}
           <section id="faq" className="py-16 relative z-20">
           <div className="container px-4 mx-auto md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -415,7 +490,7 @@ export default function Home() {
           </div>
         </section>
 
-          {/* Contact Section */}
+        {/* Contact Section */}
           <section id="contact" className="py-16 relative z-20">
           <div className="container px-4 mx-auto md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -478,16 +553,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        </main>
+      </main>
       </div>
     </div>
 
-    {/* Footer */}
+      {/* Footer */}
     <footer className="bg-gradient-to-r from-sky-400 to-blue-500 text-white py-12 relative z-20">
-      <div className="container px-4 mx-auto md:px-6">
+        <div className="px-4 md:px-12 lg:px-16 xl:px-20">
         <div className="grid gap-8 md:grid-cols-2">
           {/* Left side - Company Info */}
-          <div className="text-center md:text-left">
+            <div className="text-center md:text-left">
             <h3 className="text-2xl font-black text-white">Tiny Treasures</h3>
             <p className="mt-4 text-white/80">
               Thoughtfully crafted keepsakes to capture and <br />
@@ -497,18 +572,18 @@ export default function Home() {
               <span className="text-white font-medium">Follow us:</span>
               <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors">
                 <Instagram className="w-5 h-5 text-white" />
-                <span className="sr-only">Instagram</span>
-              </a>
+                  <span className="sr-only">Instagram</span>
+                </a>
               <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors">
                 <Facebook className="w-5 h-5 text-white" />
-                <span className="sr-only">Facebook</span>
-              </a>
+                  <span className="sr-only">Facebook</span>
+                </a>
               <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors">
-                <TikTokIcon />
-                <span className="sr-only">TikTok</span>
-              </a>
+                  <TikTokIcon />
+                  <span className="sr-only">TikTok</span>
+                </a>
+              </div>
             </div>
-          </div>
           
           {/* Right side - Three columns grouped together */}
           <div className="grid gap-8 md:grid-cols-3">
@@ -559,15 +634,21 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-white">Contact</h3>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center justify-center md:justify-start space-x-2">
-                  <Mail className="w-5 h-5 text-white" />
+                  <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-white" />
+                  </div>
                   <span className="text-white/80">tinytreasuresab@gmail.com</span>
                 </li>
                 <li className="flex items-center justify-center md:justify-start space-x-2">
-                  <Phone className="w-5 h-5 text-white" />
+                  <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-white" />
+                  </div>
                   <span className="text-white/80">(+63) 939-620-4233</span>
                 </li>
                 <li className="flex items-center justify-center md:justify-start space-x-2">
-                  <MapPin className="w-8 h-8 text-white" />
+                  <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-white" />
+                  </div>
                   <span className="text-white/80">Daet, Camarines Norte, Philippines, 4600</span>
                 </li>
               </ul>
@@ -575,10 +656,10 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/20 text-center text-white/80">
-          <p>© 2025 Tiny Treasures. All rights reserved.</p>
+            <p>© 2025 Tiny Treasures. All rights reserved.</p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
     </>
   )
 }

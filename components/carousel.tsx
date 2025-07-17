@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -81,7 +82,9 @@ export function Carousel() {
               <p className="text-sm md:text-base opacity-90 max-w-md">{item.description}</p>
             </div>
             <div className="absolute bottom-8 right-8">
-              <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white">Order Now</Button>
+              <Link href="/catalog">
+                <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white">Order Now</Button>
+              </Link>
             </div>
           </div>
         ))}
