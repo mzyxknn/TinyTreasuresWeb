@@ -26,7 +26,7 @@ const TikTokIcon = () => (
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
-  const sectionIds = ["home", "products", "about", "contact", "customOrders"]
+  const sectionIds = ["home", "products", "about", "contact"]
   const activeSection = useScrollSpy(sectionIds)
 
 
@@ -177,10 +177,10 @@ export default function Home() {
 
   useEffect(() => {
     if (window.location.hash === "#products") {
-      setTimeout(() => {
+    setTimeout(() => {
         history.replaceState(null, "", "/");
       }, 600); // Wait for scroll to finish
-    }
+  }
   }, []);
 
   return (
@@ -269,24 +269,35 @@ export default function Home() {
                   <Link href="https://www.facebook.com/profile.php?id=100089262530024">
                     <Button className="w-full bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold shadow-lg text-lg px-4 lg:px-12 py-4 h-15 lg:min-w-[200px]">Order Now</Button>
                   </Link>
-                  <SmoothScrollLink href="#customOrders" className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${activeSection === "products" ? "text-blue-800 font-bold" : ""}`}>
-                    <Button variant="outline"className="w-full border-3 border-blue-300 text-blue-600 hover:bg-blue-50 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]">
-                      Custom Orders
-                    </Button>
-                  </SmoothScrollLink>
+                  <Button
+                    variant="outline"
+                    className="w-full md:w-[20px] border-3 border-blue-300 text-blue-400 hover:text-blue-400/70 hover:bg-blue-10 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]"
+                  >
+                    Custom Orders
+                  </Button>
+
                   
                 </div>
               </div>
 
-              <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] hero-float order-2 flex items-center justify-center overflow-hidden rounded-lg cursor-pointer">
-                <Image
-                  src="/heroimage.png"
-                  alt="Tiny Treasures Products"
-                  fill
-                  className="hero-image drop-shadow-2xl object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
-                  priority
-                />
+              <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] hero-float order-2 flex items-center justify-center overflow-hidden rounded-lg cursor-pointer" style={{animation: 'float 3s ease-in-out infinite',}}>
+                <Image src="/hero.png" alt="Tiny Treasures Products" fill className="hero-image drop-shadow-2xl object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110" priority/>
               </div>
+
+<style jsx>{`
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+`}</style>
+
             </div>
           </div>
         </section>
@@ -396,7 +407,7 @@ export default function Home() {
                     </div>
             </div>
 
-            <div id ="customOrders" className="mt-16 bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+            <div className="mt-16 bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg">
               <h3 className="text-2xl font-black text-gray-800">Custom Orders</h3>
               <p className="mt-2 text-gray-600">
                 Looking for something personalized? We can create custom items just for you!
@@ -471,10 +482,10 @@ export default function Home() {
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/about section.png"
+                  src="/about-image.png"
                   alt="About Tiny Treasures"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[center_bottom_70%]"
                 />
               </div>
             </div>
@@ -575,7 +586,7 @@ export default function Home() {
             <p className="mt-4 text-white/80">
               Thoughtfully crafted keepsakes to capture and <br />
               cherish your most meaningful memories.
-            </p>
+              </p>
             <div className="flex items-center justify-center md:justify-start mt-4 space-x-3">
               <span className="text-white font-medium">Follow us:</span>
               <a href="#" className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors">
