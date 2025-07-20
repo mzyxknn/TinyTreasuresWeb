@@ -16,23 +16,23 @@ interface CarouselItem {
 const carouselItems: CarouselItem[] = [
   {
     id: 1,
-    image: "/placeholder.svg?height=400&width=800&text=Featured Design 1",
-    title: "Holographic Dreams",
-    description: "Shimmery holographic designs that change colors in the light",
+    image: "/featured-design.png",
+    title: "Pins and Keychains",
+    description: "Unique pins and keychains that add personality to your everyday style.",
   },
   {
     id: 2,
-    image: "/placeholder.svg?height=400&width=800&text=Featured Design 2",
-    title: "Vintage Polaroids",
-    description: "Classic vintage-style photo frames with retro aesthetics",
+    image: "/featured-design2.png",
+    title: "Photostrip Keychains",
+    description: "A personalized keychain that turns your favorite photos into a pocket-sized keepsake.",
   },
   {
     id: 3,
-    image: "/placeholder.svg?height=400&width=800&text=Featured Design 3",
-    title: "Kawaii Collection",
-    description: "Cute and adorable designs perfect for any occasion",
+    image: "/featured-design3.png",
+    title: "Winkie Button Pins",
+    description: "Cute and expressive pins that add a playful touch to any outfit or bag.",
   },
-  {
+  /*{
     id: 4,
     image: "/placeholder.svg?height=400&width=800&text=Featured Design 4",
     title: "Minimalist Elegance",
@@ -43,7 +43,7 @@ const carouselItems: CarouselItem[] = [
     image: "/placeholder.svg?height=400&width=800&text=Featured Design 5",
     title: "Floral Paradise",
     description: "Beautiful floral patterns and botanical designs",
-  },
+  },*/
 ]
 
 export function Carousel() {
@@ -83,7 +83,7 @@ export function Carousel() {
             </div>
             <div className="absolute bottom-8 right-8">
               <Link href="/catalog">
-                <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white">Order Now</Button>
+                <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white">View Collection</Button>
               </Link>
             </div>
           </div>

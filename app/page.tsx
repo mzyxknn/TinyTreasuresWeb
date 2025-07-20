@@ -241,7 +241,7 @@ export default function Home() {
             </SmoothScrollLink>
           </nav>
             <div className="hidden md:flex items-center">
-              <Link href="/catalog">
+              <Link href="https://web.facebook.com/profile.php?id=100089262530024">
                 <Button className="bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
                   Order Now
                 </Button>
@@ -267,11 +267,11 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link href="https://www.facebook.com/profile.php?id=100089262530024">
-                    <Button className="w-full bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold shadow-lg text-lg px-4 lg:px-12 py-4 h-15 lg:min-w-[200px]">Order Now</Button>
+                    <Button className="w-full sm:min-w-[200px] bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold shadow-lg text-lg px-4 lg:px-12 py-4 h-15 lg:min-w-[200px]">Order Now</Button>
                   </Link>
                   <Button
                     variant="outline"
-                    className="w-full md:w-[20px] border-3 border-blue-300 text-blue-400 hover:text-blue-400/70 hover:bg-blue-10 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]"
+                    className="w-full sm:min-w-[200px] md:w-[20px] border-3 border-blue-300 text-blue-400 hover:text-blue-400/70 hover:bg-blue-10 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]"
                   >
                     Custom Orders
                   </Button>
@@ -339,7 +339,8 @@ export default function Home() {
                 <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative group cursor-pointer">
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-sm font-medium text-blue-600 uppercase tracking-wide">PINS</span>
-                    <Link href="/catalog?product=button-pins">
+                    <Link href="/catalog?product=button-pins" className="flex items-center gap-1 group">
+                      <span className="text-sm font-medium text-gray-400 group-hover:text-blue-600 tracking-wide">View Designs</span>
                       <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
                     </Link>
                   </div>
@@ -363,7 +364,8 @@ export default function Home() {
                 <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative group cursor-pointer">
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-sm font-medium text-blue-600 uppercase tracking-wide">KEYCHAIN</span>
-                    <Link href="/catalog?product=keychain">
+                    <Link href="/catalog?product=keychain" className="flex items-center gap-1 group">
+                      <span className="text-sm font-medium text-gray-400 group-hover:text-blue-600 tracking-wide">View Designs</span>
                       <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
                     </Link>
                   </div>
@@ -582,8 +584,17 @@ export default function Home() {
         <div className="grid gap-8 md:grid-cols-2">
           {/* Left side - Company Info */}
             <div className="text-center md:text-left">
-            <h3 className="text-2xl font-black text-white">Tiny Treasures</h3>
-            <p className="mt-4 text-white/80">
+            <Image
+                src="/footer-logo.png"
+                alt="Tiny Treasures"
+                width={230}
+                height={70}
+                className="h-30 w-auto mx-auto sm:mx-0"
+                priority
+
+              />
+            {/* <h3 className="text-2xl font-black text-white">Tiny Treasures</h3> */}
+            <p className="mt-4 font-regular text-white/80">
               Thoughtfully crafted keepsakes to capture and <br />
               cherish your most meaningful memories.
               </p>
@@ -605,7 +616,7 @@ export default function Home() {
             </div>
           
           {/* Right side - Three columns grouped together */}
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3">
             <div className="text-center md:text-left">
               <h3 className="text-lg font-semibold text-white">Quick Links</h3>
               <ul className="mt-4 space-y-2">
