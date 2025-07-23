@@ -95,13 +95,13 @@ export function FileUpload({
       {/* Upload Area */}
       <div
         onClick={triggerFileInput}
-        className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-blue-400 hover:bg-blue-50 transition-colors"
+        className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:border-pink-400 hover:bg-pink-50 transition-colors"
       >
         <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
         <Button
           type="button"
           variant="outline"
-          className="bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100 mb-2"
+          className="bg-pink-50 text-pink-700 border-pink-200 hover:bg-pink-100 mb-2"
         >
           Choose Files
         </Button>

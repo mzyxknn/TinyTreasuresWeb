@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { useRef } from "react";
 import {
   Instagram,
   Facebook,
@@ -70,6 +71,7 @@ export default function CatalogClient() {
   );
   const [zoomLevel, setZoomLevel] = useState(1);
   const itemsPerPage = 8;
+  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const productParam = searchParams.get("product");
@@ -445,6 +447,16 @@ export default function CatalogClient() {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+    // Scroll to grid on mobile view
+    if (typeof window !== "undefined" && gridRef.current) {
+      // Offset for sticky header (adjust as needed)
+      const headerOffset = window.innerWidth < 768 ? 80 : 120;
+      const gridTop =
+        gridRef.current.getBoundingClientRect().top +
+        window.scrollY -
+        headerOffset;
+      window.scrollTo({ top: gridTop, behavior: "smooth" });
+    }
   };
 
   // Get product pricing
@@ -532,7 +544,7 @@ export default function CatalogClient() {
               className="flex items-center space-x-2 text-blue-600 hover:text-blue-700"
             >
               <ArrowLeft className="w-5 h-5" />
-              <span className="font-medium">Back to Home</span>
+              <span className="font-medium">Back to Products</span>
             </a>
             <div className="flex items-center space-x-2">
               <Image
@@ -621,7 +633,7 @@ export default function CatalogClient() {
             </div>
 
             {/* Product Grid */}
-            <div className="lg:w-3/4">
+            <div className="lg:w-3/4" ref={gridRef}>
               {/* Header */}
               <div className="mb-6">
                 <h1 className="text-2xl font-bold text-gray-800 mb-2">
@@ -905,7 +917,7 @@ export default function CatalogClient() {
       )}
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-sky-400 to-blue-500 text-white py-12 relative z-20">
+      <footer className="bg-gradient-to-r from-pink-400 to-pink-500 text-white py-12 relative z-20">
         <div className="px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Left side - Company Info */}
@@ -925,14 +937,14 @@ export default function CatalogClient() {
                   <span className="sr-only">Instagram</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=100089262530024&_rdc=1&_rdr#"
                   className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
                 >
                   <Facebook className="w-5 h-5 text-white" />
                   <span className="sr-only">Facebook</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@tinytreasuresab"
                   className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
                 >
                   <TikTokIcon />
@@ -1009,7 +1021,7 @@ export default function CatalogClient() {
                 <h3 className="text-lg font-semibold text-white">Contact</h3>
                 <ul className="mt-4 space-y-2">
                   <li className="flex items-center justify-center md:justify-start space-x-2">
-                    <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <div className="bg-pink-300/60 rounded-full p-2 flex items-center justify-center">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-white/80">
@@ -1017,13 +1029,13 @@ export default function CatalogClient() {
                     </span>
                   </li>
                   <li className="flex items-center justify-center md:justify-start space-x-2">
-                    <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <div className="bg-pink-300/60 rounded-full p-2 flex items-center justify-center">
                       <Phone className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-white/80">(+63) 939-620-4233</span>
                   </li>
                   <li className="flex items-center justify-center md:justify-start space-x-2">
-                    <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <div className="bg-pink-300/60 rounded-full p-2 flex items-center justify-center">
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-white/80">

@@ -47,7 +47,7 @@ export default function Home() {
         
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0">
-            <span class="text-blue-600 font-bold text-lg">1.</span>
+            <span class="text-pink-600 font-bold text-lg">1.</span>
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Choose Your Design</h4>
@@ -57,17 +57,17 @@ export default function Home() {
         
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0">
-            <span class="text-blue-600 font-bold text-lg">2.</span>
+            <span class="text-pink-600 font-bold text-lg">2.</span>
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Send Your Photos</h4>
-            <p class="text-gray-600 mt-1">Send your 3 desired photos for the photo strip keychain or photo for button pins to our email: <strong class="text-sky-500 bg-sky-50 px-2 py-1 rounded">tinytreasuresab@gmail.com</strong> for the better quality of the pictures.</p>
+            <p class="text-gray-600 mt-1">Send your 3 desired photos for the photo strip keychain or photo for button pins to our email: <strong class="text-pink-500 bg-pink-50 px-2 py-1 rounded">tinytreasuresab@gmail.com</strong> for the better quality of the pictures.</p>
           </div>
         </div>
          
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0">
-            <span class="text-blue-600 font-bold text-lg">3.</span>
+            <span class="text-pink-600 font-bold text-lg">3.</span>
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Down Payment</h4>
@@ -77,7 +77,7 @@ export default function Home() {
          
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0">
-            <span class="text-blue-600 font-bold text-lg">4.</span>
+            <span class="text-pink-600 font-bold text-lg">4.</span>
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Lead Time</h4>
@@ -85,19 +85,19 @@ export default function Home() {
           </div>
         </div>
         
-        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+        <div class="mt-6 p-4 bg-pink-50 rounded-lg">
           <p class="text-gray-600"><strong>P.S.</strong> You may also message us if you'd like to add or remove anything from your strip design.</p>
         </div>
       </div>`,
     },
     {
-      question: "What is the turnaround time for custom requests?",
+      question: "Turnaround for custom requests?",
       answer: `<div class="space-y-6">
         <p class="text-gray-600 mb-6"><strong>Custom orders typically follow this process:</strong></p>
         
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0">
-            <span class="text-blue-600 font-bold text-lg">1.</span>
+            <span class="text-pink-600 font-bold text-lg">1.</span>
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Design Phase</h4>
@@ -107,7 +107,7 @@ export default function Home() {
         
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0">
-            <span class="text-blue-600 font-bold text-lg">2.</span>
+            <span class="text-pink-600 font-bold text-lg">2.</span>
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Approval Time</h4>
@@ -117,17 +117,17 @@ export default function Home() {
          
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0">
-            <span class="text-blue-600 font-bold text-lg">3.</span>
+            <span class="text-pink-600 font-bold text-lg">3.</span>
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Production Time</h4>
             <div class="space-y-3 mt-1">
               <div class="flex items-start space-x-3">
-                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div class="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                 <p class="text-gray-600">It takes 1–2 business days (excluding weekends and holidays) to handcraft and prepare your custom product after design approval.</p>
               </div>
               <div class="flex items-start space-x-3">
-                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div class="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                 <p class="text-gray-600">However, turnaround time may vary depending on the number of items in your order and the volume of other custom orders in our queue. We'll always do our best to keep you updated and deliver as quickly as possible.</p>
               </div>
             </div>
@@ -136,17 +136,17 @@ export default function Home() {
          
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0">
-            <span class="text-blue-600 font-bold text-lg">4.</span>
+            <span class="text-pink-600 font-bold text-lg">4.</span>
           </div>
           <div>
             <h4 class="font-bold text-gray-800 text-lg">Shipping</h4>
             <div class="space-y-3 mt-1">
               <div class="flex items-start space-x-3">
-                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div class="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                 <p class="text-gray-600">For customers <b>within Camarines Norte</b>, orders are available for <b>pickup or local delivery</b> once ready. Just let us know your preferred option!</p>
               </div>
               <div class="flex items-start space-x-3">
-                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div class="w-2 h-2 bg-pink-500 rounded-full mt-2 flex-shrink-0"></div>
                 <p class="text-gray-600">For orders <b>outside Camarines Norte</b>, we ship nationwide. Shipping time will depend on your location and the shipping method selected at checkout. A tracking number will be provided once your order is shipped.</p>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function Home() {
     },
 
     {
-      question: "What payment methods do you accept?",
+      question: "Accepted payment methods?",
       answer:
         "We accept Cash on Pick Up (COP), Cash on Delivery (COD), GCash, and bank transfers.",
     },
@@ -225,8 +225,8 @@ export default function Home() {
             <nav className="hidden md:flex items-center space-x-8">
               <SmoothScrollLink
                 href="#home"
-                className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${
-                  activeSection === "home" ? "text-blue-800 font-bold" : ""
+                className={`text-pink-600 hover:text-pink-700 hover:font-bold transition-all duration-200 ${
+                  activeSection === "home" ? "text-pink-700 font-bold" : ""
                 }`}
               >
                 Home
@@ -234,8 +234,8 @@ export default function Home() {
 
               <SmoothScrollLink
                 href="#products"
-                className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${
-                  activeSection === "products" ? "text-blue-800 font-bold" : ""
+                className={`text-pink-600 hover:text-pink-700 hover:font-bold transition-all duration-200 ${
+                  activeSection === "products" ? "text-pink-700 font-bold" : ""
                 }`}
               >
                 Products
@@ -243,8 +243,8 @@ export default function Home() {
 
               <SmoothScrollLink
                 href="#about"
-                className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${
-                  activeSection === "about" ? "text-blue-800 font-bold" : ""
+                className={`text-pink-600 hover:text-pink-700 hover:font-bold transition-all duration-200 ${
+                  activeSection === "about" ? "text-pink-700 font-bold" : ""
                 }`}
               >
                 About Us
@@ -252,8 +252,8 @@ export default function Home() {
 
               <SmoothScrollLink
                 href="#contact"
-                className={`text-blue-600 hover:text-blue-800 hover:font-bold transition-all duration-200 ${
-                  activeSection === "contact" ? "text-blue-800 font-bold" : ""
+                className={`text-pink-600 hover:text-pink-700 hover:font-bold transition-all duration-200 ${
+                  activeSection === "contact" ? "text-pink-700 font-bold" : ""
                 }`}
               >
                 Contact
@@ -261,7 +261,7 @@ export default function Home() {
             </nav>
             <div className="hidden md:flex items-center">
               <Link href="https://web.facebook.com/profile.php?id=100089262530024">
-                <Button className="bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
+                <Button className="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl">
                   Order Now
                 </Button>
               </Link>
@@ -280,8 +280,8 @@ export default function Home() {
             <div className="container relative px-4 mx-auto md:px-6 hero-content">
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div className="space-y-4 order-1">
-                  <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-800 text-center lg:text-left">
-                    Crafted With <span className="text-blue-500">Heart,</span>{" "}
+                  <h1 className="text-5xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-gray-800 text-center lg:text-left">
+                    Crafted With <span className="text-pink-500">Heart,</span>{" "}
                     Made for Yours
                   </h1>
                   <p className="max-w-[600px] text-gray-600 text-base md:text-lg lg:text-xl font-medium text-center lg:text-left mx-auto lg:mx-0">
@@ -290,13 +290,13 @@ export default function Home() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <Link href="https://www.facebook.com/profile.php?id=100089262530024">
-                      <Button className="w-full sm:min-w-[200px] bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white font-semibold shadow-lg text-lg px-4 lg:px-12 py-4 h-15 lg:min-w-[200px]">
+                      <Button className="w-full sm:min-w-[200px] bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white font-semibold shadow-lg text-lg px-4 lg:px-12 py-4 h-15 lg:min-w-[200px]">
                         Order Now
                       </Button>
                     </Link>
                     <Button
                       variant="outline"
-                      className="w-full sm:min-w-[200px] md:w-[20px] border-3 border-blue-300 text-blue-400 hover:text-blue-400/70 hover:bg-blue-10 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]"
+                      className="w-full sm:min-w-[200px] md:w-[20px] border-3 border-pink-300 text-pink-400 hover:text-pink-400/70 hover:bg-pink-10 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]"
                     >
                       Custom Orders
                     </Button>
@@ -304,14 +304,14 @@ export default function Home() {
                 </div>
 
                 <div
-                  className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] hero-float order-2 flex items-center justify-center overflow-hidden rounded-lg cursor-pointer"
+                  className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] hero-float order-2 flex items-center justify-center overflow-hidden rounded-lg cursor-pointer drop-shadow-2xl pb-4"
                   style={{ animation: "float 3s ease-in-out infinite" }}
                 >
                   <Image
-                    src="/hero.png"
+                    src="/hero-image.png"
                     alt="Tiny Treasures Products"
                     fill
-                    className="hero-image drop-shadow-2xl object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
+                    className="hero-image object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
                     priority
                   />
                 </div>
@@ -346,7 +346,7 @@ export default function Home() {
             <section id="featured" className="py-16 relative z-20">
               <div className="container px-4 mx-auto md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
+                  <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
                     Featured Designs
                   </h2>
                   <p className="max-w-[700px] text-gray-600 md:text-xl">
@@ -361,7 +361,7 @@ export default function Home() {
             <section id="products" className="py-16 relative z-20">
               <div className="container px-4 mx-auto md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
+                  <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
                     Our Products
                   </h2>
                   <p className="max-w-[700px] text-gray-600 md:text-xl">
@@ -373,17 +373,17 @@ export default function Home() {
                     {/* Winkie Button Pins */}
                     <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative group cursor-pointer">
                       <div className="flex items-center justify-between mb-6">
-                        <span className="text-sm font-medium text-blue-600 uppercase tracking-wide">
+                        <span className="text-sm font-medium text-pink-600 uppercase tracking-wide">
                           PINS
                         </span>
                         <Link
                           href="/catalog?product=button-pins"
                           className="flex items-center gap-1 group"
                         >
-                          <span className="text-sm font-medium text-gray-400 group-hover:text-blue-600 tracking-wide">
+                          <span className="text-sm font-medium text-gray-400 group-hover:text-pink-600 tracking-wide">
                             View Designs
                           </span>
-                          <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                          <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-pink-600 transition-colors" />
                         </Link>
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
@@ -395,11 +395,11 @@ export default function Home() {
                         bags, jackets, or accessories.
                       </p>
                       <div className="mt-6 flex items-center justify-between">
-                        <span className="font-bold text-blue-600 text-lg md:text-2xl">
+                        <span className="font-bold text-pink-600 text-lg md:text-2xl">
                           ₱20.00 each
                         </span>
                         <Link href="https://www.facebook.com/profile.php?id=100089262530024">
-                          <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
+                          <Button className="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white px-6 py-2 rounded-lg transition-colors">
                             Order Now
                           </Button>
                         </Link>
@@ -409,17 +409,17 @@ export default function Home() {
                     {/* Photostrip Keychain */}
                     <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative group cursor-pointer">
                       <div className="flex items-center justify-between mb-6">
-                        <span className="text-sm font-medium text-blue-600 uppercase tracking-wide">
+                        <span className="text-sm font-medium text-pink-600 uppercase tracking-wide">
                           KEYCHAIN
                         </span>
                         <Link
                           href="/catalog?product=keychain"
                           className="flex items-center gap-1 group"
                         >
-                          <span className="text-sm font-medium text-gray-400 group-hover:text-blue-600 tracking-wide">
+                          <span className="text-sm font-medium text-gray-400 group-hover:text-pink-600 tracking-wide">
                             View Designs
                           </span>
-                          <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                          <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-pink-600 transition-colors" />
                         </Link>
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
@@ -428,14 +428,14 @@ export default function Home() {
                       <p className="text-gray-600 leading-relaxed">
                         Classic photo strip design keychain with your favorite
                         memories. Capture those special moments in a nostalgic
-                        photostrip format.
+                        photostrip design format.
                       </p>
                       <div className="mt-6 flex items-center justify-between">
-                        <span className="font-bold text-blue-600 text-lg md:text-2xl">
+                        <span className="font-bold text-pink-600 text-lg md:text-2xl">
                           ₱39.00 each
                         </span>
                         <Link href="https://www.facebook.com/profile.php?id=100089262530024">
-                          <Button className="bg-gradient-to-r from-sky-400 to-blue-500 hover:from-sky-500 hover:to-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
+                          <Button className="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white px-6 py-2 rounded-lg transition-colors">
                             Order Now
                           </Button>
                         </Link>
@@ -485,26 +485,26 @@ export default function Home() {
                   </p>
                   <div className="mt-4 space-y-4">
                     <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-500">
+                      <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-pink-500">
                         1
                       </div>
                       <p>Send us your photos and design ideas</p>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-500">
+                      <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-pink-500">
                         2
                       </div>
                       <p>We&apos;ll provide a message within 24 hours</p>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-500">
+                      <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-pink-500">
                         3
                       </div>
                       <p>Turnaround time: 1-2 business days after approval</p>
                     </div>
                   </div>
                   <Link href="https://www.facebook.com/profile.php?id=100089262530024">
-                    <Button className="mt-6 bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white">
+                    <Button className="mt-6 bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white">
                       Request Custom Order
                     </Button>
                   </Link>
@@ -517,7 +517,7 @@ export default function Home() {
               <div className="container px-4 mx-auto md:px-6">
                 <div className="grid gap-12 lg:grid-cols-2 items-center">
                   <div className="space-y-4">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800 text-center lg:text-left">
+                    <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800 text-center lg:text-left">
                       About Tiny Treasures
                     </h2>
                     <p className="text-gray-600 text-center lg:text-left mx-auto lg:mx-0">
@@ -538,30 +538,34 @@ export default function Home() {
                       </h3>
                       <ul className="mt-4 space-y-2 flex flex-col items-center lg:items-start">
                         <li className="flex items-center space-x-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-pink-500"></div>
                           <span>Handmade with love</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-pink-500"></div>
                           <span>Sustainable materials</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-pink-500"></div>
                           <span>Customer satisfaction</span>
                         </li>
                         <li className="flex items-center space-x-2">
-                          <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-pink-500"></div>
                           <span>Quality over quantity</span>
                         </li>
                       </ul>
                     </div>
                   </div>
-                  <div className="relative h-[400px] rounded-lg overflow-hidden">
+                  <div
+                    className="relative  h-[250px] sm:h-[300px] md:h-[400px] hero-float flex items-center justify-center overflow-hidden rounded-lg cursor-pointer"
+                    style={{ animation: "float 3s ease-in-out infinite" }}
+                  >
                     <Image
                       src="/about-image.png"
                       alt="About Tiny Treasures"
                       fill
-                      className="object-cover object-[center_bottom_70%]"
+                      className="object-cover object-center drop-shadow-2xl transition-transform duration-300 ease-in-out hover:scale-110"
+                      priority
                     />
                   </div>
                 </div>
@@ -572,7 +576,7 @@ export default function Home() {
             <section id="faq" className="py-16 relative z-20">
               <div className="container px-4 mx-auto md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
+                  <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
                     Frequently Asked Questions
                   </h2>
                   <p className="max-w-[700px] text-gray-600 md:text-xl">
@@ -590,7 +594,7 @@ export default function Home() {
             <section id="contact" className="py-16 relative z-20">
               <div className="container px-4 mx-auto md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
+                  <h2 className="text-4xl font-bold tracking-tighter sm:text-4xl md:text-6xl text-gray-800">
                     Get In Touch
                   </h2>
                   <p className="max-w-[700px] text-gray-600 md:text-xl">
@@ -671,7 +675,7 @@ export default function Home() {
                           Supported formats: Images, PDF, DOC, DOCX
                         </p>
                       </div>
-                      <Button className="w-full bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 text-white">
+                      <Button className="w-full bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white">
                         Send Message
                       </Button>
                     </form>
@@ -684,7 +688,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-sky-400 to-blue-500 text-white py-12 relative z-20">
+      <footer className="bg-gradient-to-r from-pink-400 to-pink-500 text-white py-12 relative z-20">
         <div className="px-4 md:px-12 lg:px-16 xl:px-20">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Left side - Company Info */}
@@ -797,7 +801,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-white">Contact</h3>
                 <ul className="mt-4 space-y-2">
                   <li className="flex items-center justify-center md:justify-start space-x-2">
-                    <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <div className="bg-pink-300/60 rounded-full p-2 flex items-center justify-center">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-white/80">
@@ -805,13 +809,13 @@ export default function Home() {
                     </span>
                   </li>
                   <li className="flex items-center justify-center md:justify-start space-x-2">
-                    <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <div className="bg-pink-300/60 rounded-full p-2 flex items-center justify-center">
                       <Phone className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-white/80">(+63) 939-620-4233</span>
                   </li>
                   <li className="flex items-center justify-center md:justify-start space-x-2">
-                    <div className="bg-sky-300/60 rounded-full p-2 flex items-center justify-center">
+                    <div className="bg-pink-300/60 rounded-full p-2 flex items-center justify-center">
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-white/80">

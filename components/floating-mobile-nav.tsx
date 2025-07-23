@@ -30,8 +30,8 @@ export function FloatingMobileNav({ activeSection }: FloatingMobileNavProps) {
                 href={item.href}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-full transition-all duration-200 ${
                   isActive
-                    ? "bg-gradient-to-l from-blue-400 to-cyan-500 text-white shadow-md"
-                    : "text-gray-700 hover:text-blue-500 hover:bg-white/20"
+                    ? "bg-gradient-to-l from-pink-400 to-pink-500 text-white shadow-md"
+                    : "text-gray-700 hover:text-pink-500 hover:bg-white/20"
                 }`}
               >
                 <Icon className="w-5 h-5 flex-shrink-0" />
