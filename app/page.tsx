@@ -177,6 +177,46 @@ export default function Home() {
     },
   ];
 
+  // Contact form state
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+    setError("");
+    setSent(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSent(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setError("Failed to send message. Please try again.");
+      }
+    } catch {
+      setError("Failed to send message. Please try again.");
+    }
+    setSending(false);
+  };
+
   useEffect(() => {
     // Simulate initial loading
     const timer = setTimeout(() => {
@@ -193,6 +233,16 @@ export default function Home() {
       }, 600); // Wait for scroll to finish
     }
   }, []);
+
+  useEffect(() => {
+    if (sent) {
+      const timer = setTimeout(() => {
+        setSent(false);
+      }, 5000); // 5000ms = 5 seconds
+
+      return () => clearTimeout(timer); // Cleanup in case component unmounts
+    }
+  }, [sent]);
 
   return (
     <>
@@ -270,7 +320,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className="min-h-screen relative px-4 md:px-12 lg:px-16 xl:px-20">
+      <div className="px-4 md:px-12 lg:px-16 xl:px-20">
         <main>
           {/* Hero Section */}
           <section
@@ -304,14 +354,14 @@ export default function Home() {
                 </div>
 
                 <div
-                  className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] hero-float order-2 flex items-center justify-center overflow-hidden rounded-lg cursor-pointer drop-shadow-2xl pb-4"
+                  className="relative w-full aspect-[4/3] hero-float order-2 flex items-center justify-center overflow-hidden rounded-lg cursor-pointer drop-shadow-2xl"
                   style={{ animation: "float 3s ease-in-out infinite" }}
                 >
                   <Image
                     src="/hero-image.png"
                     alt="Tiny Treasures Products"
                     fill
-                    className="hero-image object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
+                    className="object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
                     priority
                   />
                 </div>
@@ -557,14 +607,14 @@ export default function Home() {
                     </div>
                   </div>
                   <div
-                    className="relative  h-[250px] sm:h-[300px] md:h-[400px] hero-float flex items-center justify-center overflow-hidden rounded-lg cursor-pointer"
+                    className="relative w-full max-w-3xl aspect-[4/3] mx-auto hero-float flex items-center justify-center overflow-hidden rounded-lg cursor-pointer drop-shadow-2xl"
                     style={{ animation: "float 3s ease-in-out infinite" }}
                   >
                     <Image
                       src="/about-image.png"
                       alt="About Tiny Treasures"
                       fill
-                      className="object-cover object-center drop-shadow-2xl transition-transform duration-300 ease-in-out hover:scale-110"
+                      className="object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
                       priority
                     />
                   </div>
@@ -607,7 +657,7 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-center text-gray-800 mb-6">
                       Contact Us
                     </h3>
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                       <div className="grid gap-4 sm:grid-cols-2">
                         <div className="space-y-2">
                           <label
@@ -616,7 +666,13 @@ export default function Home() {
                           >
                             Name
                           </label>
-                          <Input id="name" placeholder="Your name" />
+                          <Input
+                            id="name"
+                            placeholder="Your name"
+                            value={form.name}
+                            onChange={handleChange}
+                            required
+                          />
                         </div>
                         <div className="space-y-2">
                           <label
@@ -629,6 +685,9 @@ export default function Home() {
                             id="email"
                             type="email"
                             placeholder="Your email"
+                            value={form.email}
+                            onChange={handleChange}
+                            required
                           />
                         </div>
                       </div>
@@ -639,7 +698,13 @@ export default function Home() {
                         >
                           Subject
                         </label>
-                        <Input id="subject" placeholder="Subject" />
+                        <Input
+                          id="subject"
+                          placeholder="Subject"
+                          value={form.subject}
+                          onChange={handleChange}
+                          required
+                        />
                       </div>
                       <div className="space-y-2">
                         <label
@@ -652,33 +717,28 @@ export default function Home() {
                           id="message"
                           placeholder="Your message"
                           className="min-h-[120px]"
+                          value={form.message}
+                          onChange={handleChange}
+                          required
                         />
                       </div>
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="attachment"
-                          className="text-sm font-medium text-gray-700"
-                        >
-                          Attachments (Optional - Max 5 files, 10MB each)
-                        </label>
-                        <FileUpload
-                          id="attachment"
-                          accept="image/*,.pdf,.doc,.docx"
-                          maxSize={10}
-                          maxFiles={5}
-                          onFilesChange={(files) => {
-                            // Handle files change if needed
-                            console.log("Selected files:", files);
-                          }}
-                        />
-                        <p className="text-xs text-gray-500">
-                          Supported formats: Images, PDF, DOC, DOCX
+                      {error && <p className="text-red-500 text-sm">{error}</p>}
+                      {sent && (
+                        <p className="text-green-600 text-sm">
+                          Message sent! We'll get back to you soon.
                         </p>
-                      </div>
-                      <Button className="w-full bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white">
-                        Send Message
+                      )}
+                      <Button
+                        className="w-full bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white"
+                        type="submit"
+                        disabled={sending}
+                      >
+                        {sending ? "Sending..." : "Send Message"}
                       </Button>
                     </form>
+                    <p className="text-xs text-gray-500 mt-4 text-center">
+                      Your message will be sent to <b>abrioandreac@gmail.com</b>
+                    </p>
                   </Card>
                 </div>
               </div>
@@ -686,10 +746,9 @@ export default function Home() {
           </main>
         </div>
       </div>
-
       {/* Footer */}
       <footer className="bg-gradient-to-r from-pink-400 to-pink-500 text-white py-12 relative z-20">
-        <div className="px-4 md:px-12 lg:px-16 xl:px-20">
+        <div className="px-4 md:px-12 lg:px-16 xl:px-20 max-w-screen-xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Left side - Company Info */}
             <div className="text-center md:text-left">
