@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,16 +15,11 @@ import {
   MapPin,
   ArrowUpRight,
 } from "lucide-react";
-import { FlipCard } from "@/components/flip-card";
 import { FAQAccordion } from "@/components/faq-accordion";
 import { Carousel } from "@/components/carousel";
-import { FileUpload } from "@/components/file-upload";
 import { useScrollSpy } from "../hooks/use-scroll-spy";
 import { SmoothScrollLink } from "@/components/smooth-scroll-link";
-import {
-  ProductCardSkeleton,
-  CarouselSkeleton,
-} from "@/components/loading-skeleton";
+import { CarouselSkeleton } from "@/components/loading-skeleton";
 import { FloatingMobileNav } from "@/components/floating-mobile-nav";
 
 const TikTokIcon = () => (
