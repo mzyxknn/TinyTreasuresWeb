@@ -338,12 +338,14 @@ export default function Home() {
                         Order Now
                       </Button>
                     </Link>
-                    <Button
-                      variant="outline"
-                      className="w-full sm:min-w-[200px] md:w-[20px] border-3 border-pink-300 text-pink-400 hover:text-pink-400/70 hover:bg-pink-10 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]"
-                    >
-                      Custom Orders
-                    </Button>
+                    <SmoothScrollLink href="#products">
+                      <Button
+                        variant="outline"
+                        className="w-full sm:min-w-[200px] md:w-[20px] border-3 border-pink-300 text-pink-400 hover:text-pink-400/70 hover:bg-pink-10 bg-white/80 backdrop-blur-sm text-lg px-4 py-4 h-15 lg:min-w-[200px]"
+                      >
+                        Custom Orders
+                      </Button>
+                    </SmoothScrollLink>
                   </div>
                 </div>
 
@@ -442,7 +444,7 @@ export default function Home() {
                         <span className="font-bold text-pink-600 text-lg md:text-2xl">
                           ₱20.00 each
                         </span>
-                        <Link href="https://www.facebook.com/profile.php?id=100089262530024">
+                        <Link href="https://www.facebook.com/share/p/1N7MYCJQ61/">
                           <Button className="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white px-6 py-2 rounded-lg transition-colors">
                             Order Now
                           </Button>
@@ -472,13 +474,13 @@ export default function Home() {
                       <p className="text-gray-600 leading-relaxed">
                         Classic photo strip design keychain with your favorite
                         memories. Capture those special moments in a nostalgic
-                        photostrip design format.
+                        photostrip format.
                       </p>
                       <div className="mt-6 flex items-center justify-between">
                         <span className="font-bold text-pink-600 text-lg md:text-2xl">
                           ₱39.00 each
                         </span>
-                        <Link href="https://www.facebook.com/profile.php?id=100089262530024">
+                        <Link href="https://www.facebook.com/share/p/16aBKrrhuu/">
                           <Button className="bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white px-6 py-2 rounded-lg transition-colors">
                             Order Now
                           </Button>
