@@ -240,7 +240,7 @@ export default function Home() {
         setSent(false);
       }, 5000); // 5000ms = 5 seconds
 
-      return () => clearTimeout(timer); // Cleanup in case component unmounts
+      return () => clearTimeout(timer);
     }
   }, [sent]);
 
@@ -725,7 +725,7 @@ export default function Home() {
                       {error && <p className="text-red-500 text-sm">{error}</p>}
                       {sent && (
                         <p className="text-green-600 text-sm">
-                          Message sent! We'll get back to you soon.
+                          Message sent! We&apos;ll get back to you soon.
                         </p>
                       )}
                       <Button
