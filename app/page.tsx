@@ -744,7 +744,7 @@ export default function Home() {
       </div>
       {/* Footer */}
       <footer className="bg-gradient-to-r from-pink-400 to-pink-500 text-white py-12 relative z-20">
-        <div className="px-4 md:px-12 lg:px-16 xl:px-20 max-w-screen-xl mx-auto">
+        <div className="container mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Left side - Company Info */}
             <div className="text-center md:text-left">

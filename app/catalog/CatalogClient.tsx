@@ -537,7 +537,7 @@ export default function CatalogClient() {
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <div className="px-8 md:px-12 lg:px-16 xl:px-20 py-4">
-          <div className="flex items-center justify-between">
+          <div className="container flex items-center justify-center md:justify-between h-10 px-2 mx-auto">
             <a
               href={`/#${fromSection}`}
               onClick={handleBackToHome}
@@ -561,7 +561,7 @@ export default function CatalogClient() {
       </header>
 
       {/* Main Content */}
-      <div className="min-h-screen relative px-8 md:px-12 lg:px-16 xl:px-20">
+      <div className="px-4 md:px-12 lg:px-16 xl:px-20">
         <div className="container mx-auto py-8">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Sidebar */}
@@ -918,12 +918,20 @@ export default function CatalogClient() {
 
       {/* Footer */}
       <footer className="bg-gradient-to-r from-pink-400 to-pink-500 text-white py-12 relative z-20">
-        <div className="px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="container mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
           <div className="grid gap-8 md:grid-cols-2">
             {/* Left side - Company Info */}
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-black text-white">Tiny Treasures</h3>
-              <p className="mt-4 text-white/80">
+              <Image
+                src="/footer-logo.png"
+                alt="Tiny Treasures"
+                width={230}
+                height={70}
+                className="h-30 w-auto mx-auto sm:mx-0"
+                priority
+              />
+              {/* <h3 className="text-2xl font-black text-white">Tiny Treasures</h3> */}
+              <p className="mt-4 font-regular text-white/80">
                 Thoughtfully crafted keepsakes to capture and <br />
                 cherish your most meaningful memories.
               </p>
@@ -937,7 +945,7 @@ export default function CatalogClient() {
                   <span className="sr-only">Instagram</span>
                 </a>
                 <a
-                  href="https://www.facebook.com/profile.php?id=100089262530024&_rdc=1&_rdr#"
+                  href="https://web.facebook.com/profile.php?id=100089262530024"
                   className="bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
                 >
                   <Facebook className="w-5 h-5 text-white" />
@@ -954,43 +962,44 @@ export default function CatalogClient() {
             </div>
 
             {/* Right side - Three columns grouped together */}
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-3">
               <div className="text-center md:text-left">
                 <h3 className="text-lg font-semibold text-white">
                   Quick Links
                 </h3>
                 <ul className="mt-4 space-y-2">
                   <li>
-                    <Link
-                      href="/"
+                    <SmoothScrollLink
+                      href="#home"
                       className="text-white/80 hover:text-white transition-colors"
                     >
                       Home
-                    </Link>
+                    </SmoothScrollLink>
                   </li>
                   <li>
-                    <Link
-                      href="/#products"
+                    <SmoothScrollLink
+                      href="#products"
                       className="text-white/80 hover:text-white transition-colors"
                     >
                       Products
-                    </Link>
+                    </SmoothScrollLink>
                   </li>
+
                   <li>
-                    <Link
-                      href="/#about"
+                    <SmoothScrollLink
+                      href="#about"
                       className="text-white/80 hover:text-white transition-colors"
                     >
                       About
-                    </Link>
+                    </SmoothScrollLink>
                   </li>
                   <li>
-                    <Link
-                      href="/#contact"
+                    <SmoothScrollLink
+                      href="#contact"
                       className="text-white/80 hover:text-white transition-colors"
                     >
                       Contact
-                    </Link>
+                    </SmoothScrollLink>
                   </li>
                 </ul>
               </div>
@@ -999,20 +1008,20 @@ export default function CatalogClient() {
                 <h3 className="text-lg font-semibold text-white">Product</h3>
                 <ul className="mt-4 space-y-2">
                   <li>
-                    <Link
-                      href="/#products"
+                    <SmoothScrollLink
+                      href="#products"
                       className="text-white/80 hover:text-white transition-colors"
                     >
                       Wikie Button Pins
-                    </Link>
+                    </SmoothScrollLink>
                   </li>
                   <li>
-                    <Link
-                      href="/#products"
+                    <SmoothScrollLink
+                      href="#products"
                       className="text-white/80 hover:text-white transition-colors"
                     >
                       Photostrip Keychain
-                    </Link>
+                    </SmoothScrollLink>
                   </li>
                 </ul>
               </div>
